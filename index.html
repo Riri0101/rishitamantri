@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="#resume" onclick="downloadAndScroll()">Resume</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#resume" onclick="download()">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">More</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -62,15 +62,16 @@
                 <img class="img-fluid" src="ipad.png" alt="..." />
             </div>
         </section>
+        
         <!-- resume display --> 
-        <section class="projects-section bg-light" id="resume">
+        <section class="projects-section bg-light" id="resume" style="padding: 0; margin: 0;>
             <div class="container px-4 px-lg-5">
                 <h2 class="mb-4">Resume</h2>
-                <p class="text-black-50 mb-4"> Here’s a quick look at where I’ve been — professionally and otherwise. 
-                </p>
+                <p class="text-black-50 mb-4"> Here’s a quick look at where I’ve been — professionally and otherwise. </p> 
+            </div>
         
             <!-- Optional: Embedded Preview -->
-            <div class="mt-5">
+            <div style="width: 100vw; height: 100vh; margin: 0; padding: 0;">
               <iframe 
                 src="Resume.pdf" 
                 width="100%" 
@@ -79,8 +80,8 @@
                 style="border: none; display: block;">
               </iframe>
             </div>
-          </div>
         </section>
+
             
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
@@ -176,7 +177,7 @@
     </section> 
         <!-- Contact-->
         <section id="contact" class="contact-section bg-black">
-            <h1 class="mb-4 text-white">Say Hi!</h1>
+            <h1 class="mb-4 text-white text-center">Say Hi!</h1>
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-4 mb-3 mb-md-0">
