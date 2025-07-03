@@ -15,6 +15,57 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
     </head>
+    <style>
+  /* === Global Base Styling === */
+      body {
+        background-color: #000;
+        color: #f1f1f1;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+      /* === Header Text (h1–h6) === */
+      h1, h2, h3, h4, h5, h6 {
+        color: #aaaaaa;
+        letter-spacing: 0.5px;
+      }
+    
+      /* === Section Headings === */
+      section h2 {
+        color: #aaaaaa;
+        font-weight: 600;
+      }
+
+  /* === Body Links === */
+      a {
+        color: #3b82f6;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #facc15;
+        text-decoration: none;
+      }
+    
+      /* === Buttons (Primary) === */
+      .btn-primary {
+        background-color: #f59e0b;
+        border: none;
+        color: #000;
+      }
+      .btn-primary:hover {
+        background-color: #facc15;
+        color: #000;
+      }
+    
+      /* === Smooth Fade-in for Sections === */
+      section {
+        animation: fadeIn 0.6s ease-in;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
