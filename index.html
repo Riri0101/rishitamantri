@@ -56,28 +56,40 @@
           color: #f59e0b; /* orange on hover */
         }
 
-  /* === Body Links === */
-      a {
-        color: #3b82f6;
-        transition: color 0.3s ease;
-      }
-      a:hover {
-        color: #facc15;
-        text-decoration: none;
-      }
-    
-      /* === Buttons (Primary) === */
-      .btn-primary {
-        background-color: #f59e0b;
-        border: none;
-        color: #000;
-      }
-      .btn-primary:hover {
-        background-color: #facc15;
-        color: #000;
-      }
-    
-      /* === Smooth Fade-in for Sections === */
+        <style>
+        /* Override teal border/bottom bar */
+        .border-primary,
+        .border-bottom,
+        hr.primary {
+          border-color: #FFA500 !important; /* vibrant orange */
+        }
+        
+        /* Override teal text */
+        .text-primary {
+          color: #FFA500 !important;
+        }
+        
+        /* Change icon highlight (contact section) */
+        .contact-section i {
+          color: #FFA500 !important;
+        }
+        
+        /* Icon on hover */
+        .contact-section i:hover {
+          color: #FFD700 !important; /* yellowish shade */
+        }
+        
+        /* Change underline below "Address", "Email", etc. */
+        .contact-section .divider-custom-line {
+          background-color: #FFA500 !important;
+        }
+        
+        /* Header hover color */
+        .navbar-nav .nav-link:hover {
+          color: #FFA500 !important;
+        }
+        
+        /* smooth scroll */
       section {
         animation: fadeIn 0.6s ease-in;
       }
@@ -162,7 +174,7 @@
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
-                <h2 class="mb-4">Know Me More</h2>
+                <h1 class="mb-4" >Know Me More</h1>
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="bg-masthead.jpg" alt="..." /></div>
