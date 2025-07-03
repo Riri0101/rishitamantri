@@ -68,14 +68,13 @@
         from { opacity: 0; transform: translateY(20px); }
         to   { opacity: 1; transform: translateY(0); }
       }
-    #scroll-gradient-bg {
+
+      #scroll-gradient-bg {
+        min-height: 250vh; /* enough space to scroll through */
+        transition: background 0.3s ease;
         background: linear-gradient(to bottom, #000000 0%, #ffffff 50%, #000000 100%);
-        transition: background 1s ease-in-out;
-        }
-        .projects-section {
-            min-height: 200vh; /* long enough to see the scroll effect */
-            padding: 100px 0;
-        }
+      }
+
     </style>
 
     <body id="page-top">
@@ -337,17 +336,24 @@
           ]
         });
     </script>
-       <!-- <script>
-            window.addEventListener("scroll", function () {
-                const section = document.getElementById("gradient-transition");
-                const rect = section.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-                if (rect.top <= windowHeight / 2) {
-                    section.classList.add("gradient-active");
-                } else {
-                    section.classList.remove("gradient-active");
-                }
-            });
-        </script> --> 
+<script>
+  window.addEventListener("scroll", function () {
+    const section = document.getElementById("scroll-gradient-bg");
+    const rect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const sectionOffsetTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    // Calculate how far we've scrolled into the gradient section (0 to 1)
+    let scrollPercent = (scrollTop - sectionOffsetTop) / sectionHeight;
+    scrollPercent = Math.max(0, Math.min(1, scrollPercent)); // clamp between 0 and 1
+
+    // Update gradient dynamically
+    const gradientPosition = scrollPercent * 100;
+    section.style.background = `linear-gradient(to bottom, #000000 0%, #ffffff ${gradientPosition}%, #000000 100%)`;
+  });
+</script>
+
     </body>
 </html>
