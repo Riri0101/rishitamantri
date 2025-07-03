@@ -306,5 +306,17 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            window.addEventListener("scroll", function () {
+                const section = document.getElementById("gradient-transition");
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                if (rect.top <= windowHeight / 2) {
+                    section.classList.add("gradient-active");
+                } else {
+                    section.classList.remove("gradient-active");
+                }
+            });
+        </script>
     </body>
 </html>
