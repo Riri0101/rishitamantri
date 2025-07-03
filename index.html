@@ -68,13 +68,29 @@
         from { opacity: 0; transform: translateY(20px); }
         to   { opacity: 1; transform: translateY(0); }
       }
+        
+      .gradient-bg-section {
+        min-height: 100vh;
+        transition: background 0.5s ease;
+        background: linear-gradient(135deg, #111111, #222222); /* default dark */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 20px;
+        text-align: center;
+      }
+    
+      .gradient-active {
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* colorful gradient */
+      }
     </style>
 
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Top</a>
+                <a class="navbar-brand" href="#page-top">Portfolio</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -139,9 +155,11 @@
                 style="border: none; display: block;">
               </iframe>
             </div>
-        </section>
+        </section> -->
 
-            
+        <section id="gradient-transition" class="gradient-bg-section">
+            <div class="container"> </div> </section>
+        
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
