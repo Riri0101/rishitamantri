@@ -329,6 +329,22 @@ th {
   text-align: -webkit-match-parent;
 }
 
+/* Gradient container covering multiple sections */
+  #scroll-gradient-bg {
+    background: linear-gradient(to bottom, #000000 0%, #ffffff 50%, #000000 100%);
+    transition: background 1s ease-in-out;
+  }
+
+  /* Give spacing so the scroll reveals the gradient nicely */
+  .section-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    color: #000;
+  }
+
 thead,
 tbody,
 tfoot,
