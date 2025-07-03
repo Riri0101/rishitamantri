@@ -68,21 +68,21 @@
         from { opacity: 0; transform: translateY(20px); }
         to   { opacity: 1; transform: translateY(0); }
       }
-        
-      .gradient-bg-section {
+
+        /* Gradient container covering multiple sections */
+          #scroll-gradient-bg {
+              background: linear-gradient(to bottom, #000000 0%, #ffffff 50%, #000000 100%);
+              transition: background 1s ease-in-out;
+          }
+
+      /* Give spacing so the scroll reveals the gradient nicely */
+      .section-content {
         min-height: 100vh;
-        transition: background 0.5s ease;
-        background: linear-gradient(135deg, #111111, #222222); /* default dark */
-        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 100px 20px;
-        text-align: center;
-      }
-    
-      .gradient-active {
-        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* colorful gradient */
+        color: #000;
       }
     </style>
 
@@ -157,8 +157,7 @@
             </div>
         </section> -->
 
-        <section id="gradient-transition" class="gradient-bg-section">
-            <div class="container"> </div> </section>
+        <div id="scroll-gradient-bg">
         
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
@@ -208,6 +207,7 @@
                     </div>
                 </div>
             </div>
+        </div> 
         </section>
         <!-- Signup page deactivated for now--> 
       <!--  <section class="signup-section" id="signup">
@@ -306,7 +306,7 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script>
+       <!-- <script>
             window.addEventListener("scroll", function () {
                 const section = document.getElementById("gradient-transition");
                 const rect = section.getBoundingClientRect();
@@ -317,6 +317,6 @@
                     section.classList.remove("gradient-active");
                 }
             });
-        </script>
+        </script> --> 
     </body>
 </html>
