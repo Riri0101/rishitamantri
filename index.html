@@ -68,22 +68,14 @@
         from { opacity: 0; transform: translateY(20px); }
         to   { opacity: 1; transform: translateY(0); }
       }
-
-        /* Gradient container covering multiple sections */
-          #scroll-gradient-bg {
-              background: linear-gradient(to bottom, #000000 0%, #ffffff 50%, #000000 100%);
-              transition: background 1s ease-in-out;
-          }
-
-      /* Give spacing so the scroll reveals the gradient nicely */
-      .section-content {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 20px;
-        color: #000;
-      }
+    #scroll-gradient-bg {
+        background: linear-gradient(to bottom, #000000 0%, #ffffff 50%, #000000 100%);
+        transition: background 1s ease-in-out;
+        }
+        .projects-section {
+            min-height: 200vh; /* long enough to see the scroll effect */
+            padding: 100px 0;
+        }
     </style>
 
     <body id="page-top">
@@ -161,7 +153,7 @@
         <div id="scroll-gradient-bg">
         
         <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+        <section class="projects-section" id="projects">
             <div class="container px-4 px-lg-5">
                 <h1 class="mb-4" style="color: black;">Know Me More</h1>
                 <!-- Featured Project Row-->
@@ -179,7 +171,7 @@
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="img2.png" alt="..." /></div>
                     <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
+                        <div class="text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">Currently Learning</h4>
