@@ -69,12 +69,6 @@
         to   { opacity: 1; transform: translateY(0); }
       }
 
-      #scroll-gradient-bg {
-        min-height: 250vh; /* enough space to scroll through */
-        transition: background 0.3s ease;
-        background: linear-gradient(to bottom, #000000 0%, #ffffff 50%, #000000 100%);
-      }
-
     </style>
 
     <body id="page-top">
@@ -148,8 +142,6 @@
               </iframe>
             </div>
         </section> -->
-
-        <div id="scroll-gradient-bg">
         
         <!-- Projects-->
         <section class="projects-section" id="projects">
@@ -199,7 +191,6 @@
                     </div>
                 </div>
             </div>
-        </div> 
         </section>
         <!-- Signup page deactivated for now--> 
       <!--  <section class="signup-section" id="signup">
@@ -336,24 +327,7 @@
           ]
         });
     </script>
-<script>
-  window.addEventListener("scroll", function () {
-    const section = document.getElementById("scroll-gradient-bg");
-    const rect = section.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const sectionOffsetTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
 
-    // Calculate how far we've scrolled into the gradient section (0 to 1)
-    let scrollPercent = (scrollTop - sectionOffsetTop) / sectionHeight;
-    scrollPercent = Math.max(0, Math.min(1, scrollPercent)); // clamp between 0 and 1
-
-    // Update gradient dynamically
-    const gradientPosition = scrollPercent * 100;
-    section.style.background = `linear-gradient(to bottom, #000000 0%, #ffffff ${gradientPosition}%, #000000 100%)`;
-  });
-</script>
 
     </body>
 </html>
