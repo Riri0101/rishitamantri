@@ -77,7 +77,13 @@
         from { opacity: 0; transform: translateY(20px); }
         to   { opacity: 1; transform: translateY(0); }
       }
-
+        .scrolling-wrapper {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+      }
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+      }
     </style>
 
     <body id="page-top">
@@ -200,8 +206,39 @@
                     </div>
                 </div>
             </div>
-        </div> 
         </section>
+        <!-- Essays Section (Behind the Resume) -->
+        <section style="background-color: #111; padding: 3rem 0;">
+            <div class="container px-4 px-lg-5">
+                <div style="overflow-x: auto; white-space: nowrap; scroll-snap-type: x mandatory;">
+                    <h2 class="text-center display-4 fw-bold mb-5">Behind the Resume</h2>
+                      <!-- Scrollable container -->
+                    <div class="scrolling-wrapper d-flex overflow-auto">
+                        <!-- Essay Card 1 -->
+                        <div class="card bg-black text-white me-4" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/essay1.jpg" class="card-img-top" alt="Essay 1">
+                            <div class="card-body">
+                                <h5 class="card-title">The First Time I Felt Shame</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Personal Reflections</h6>
+                                <p class="card-text">I was nine. A whisper in the hallway about a boy and a rumor. That was the moment I learned how silence can scream louder than words...</p>
+                                <a href="#" class="btn btn-outline-light">Read more</a>
+                            </div>
+                        </div>
+                        <!-- Essay Card 2 -->
+                        <div class="card bg-black text-white me-4" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/essay2.jpg" class="card-img-top" alt="Essay 2">
+                            <div class="card-body">
+                                <h5 class="card-title">I Don’t Want to Be Ambitious Like That</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Growth & Perspective</h6>
+                                <p class="card-text">For a long time, ambition looked like power and prestige. Now it looks like peace. Like waking up curious instead of anxious...</p>
+                                <a href="#" class="btn btn-outline-light">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+      
 
         <!-- Signup page deactivated for now--> 
       <!--  <section class="signup-section" id="signup">
