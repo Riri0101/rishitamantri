@@ -84,6 +84,63 @@
         .scrolling-wrapper::-webkit-scrollbar {
             display: none; /* Chrome, Safari */
       }
+
+        .essay-scroll-container {
+          display: flex;
+          overflow-x: auto;
+          gap: 2rem; /* spacing between cards */
+          scroll-snap-type: x mandatory;
+          padding: 1rem 0;
+        }
+        
+        .essay-card {
+          background-color: #1a1a1a;
+          color: white;
+          padding: 1.5rem;
+          border-radius: 12px;
+          flex: 0 0 300px; /* width of each card */
+          scroll-snap-align: start;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .essay-card img {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+        }
+        
+        .essay-card h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .essay-card .category {
+          color: #aaa;
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .essay-card .excerpt {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+        
+        .essay-card a {
+          color: white;
+          border: 1px solid white;
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: 500;
+          transition: 0.3s;
+        }
+        .essay-card a:hover {
+          background-color: white;
+          color: black;
+        }
+
     </style>
 
     <body id="page-top">
@@ -217,15 +274,15 @@
             <div style="display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px;">
 
                 <!-- Scrollable container -->
-                <div class="scrolling-wrapper d-flex overflow-auto">
-              
+                <div class="essay-scroll-container">
+
               <!-- Essay Card 1 -->
               <div style="flex: 0 0 auto; width: 300px; background-color: #1c1c1c; border-radius: 10px; padding: 16px; scroll-snap-align: start;">
                 <img src="essay1.jpg" alt="Essay 1" style="width: 100%; height: auto; border-radius: 6px;" />
                   <h5 style="color: #ffffff; margin-top: 1rem;">The First Time I Felt Shame</h5>
                     <p style="color: #888; font-size: 0.9rem;">Personal Reflections</p>
                     <p style="color: #ddd; font-size: 0.95rem;">I was nine. A whisper in the hallway rewrote my sense of safety.</p>
-                    <a href="essays/first-time-felt-shame.html" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
               </div>
 
               <!-- Essay Card 2 -->
@@ -234,15 +291,16 @@
                   <h5 style="color: #ffffff; margin-top: 1rem;">I Don’t Want to Be Ambitious Like That</h5>
                     <p style="color: #888; font-size: 0.9rem;">Growth & Perspective</p>
                     <p style="color: #ddd; font-size: 0.95rem;">For a long time, ambition looked like power and prestige. Now it looks like peace and purpose.</p>
-                    <a href="essays/dont-want-to-be-ambitious.html" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
               </div>
-                <!-- Essay Card 3 -->
+                
+                    <!-- Essay Card 3 -->
               <div style="flex: 0 0 auto; width: 300px; background-color: #1c1c1c; border-radius: 10px; padding: 16px; scroll-snap-align: start;">
                 <img src="essay2.jpg" alt="Essay 2" style="width: 100%; height: auto; border-radius: 6px;" />
                   <h5 style="color: #ffffff; margin-top: 1rem;">I Don’t Want to Be Ambitious Like That</h5>
                     <p style="color: #888; font-size: 0.9rem;">Growth & Perspective</p>
                     <p style="color: #ddd; font-size: 0.95rem;">For a long time, ambition looked like power and prestige. Now it looks like peace and purpose.</p>
-                    <a href="essays/dont-want-to-be-ambitious.html" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
               </div>
 
                 <!-- Essay Card 4 -->
@@ -251,10 +309,9 @@
                   <h5 style="color: #ffffff; margin-top: 1rem;">I Don’t Want to Be Ambitious Like That</h5>
                     <p style="color: #888; font-size: 0.9rem;">Growth & Perspective</p>
                     <p style="color: #ddd; font-size: 0.95rem;">For a long time, ambition looked like power and prestige. Now it looks like peace and purpose.</p>
-                    <a href="essays/dont-want-to-be-ambitious.html" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
               </div>
 
-        
               <!-- Add more cards as needed -->
         
             </div>
