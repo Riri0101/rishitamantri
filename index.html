@@ -39,10 +39,9 @@
         letter-spacing: 0.5px;
         font-family: 'Space Grotesk', sans-serif;
       }
-    body, p, a, li, span {
+        body, p, a, li, span {
         font-family: 'Inter', sans-serif;
-    }
-    
+        }
       /* === Section Headings === */
       section h2 {
         color: #aaaaaa;
@@ -53,7 +52,6 @@
           color: #aaaaaa; /* soft grey */
           transition: color 0.3s ease;
         }
-        
         /* === Navbar Links on Hover === */
         .navbar-dark .navbar-nav .nav-link:hover {
           color: #facc15; /* vibrant yellow */
@@ -64,7 +62,6 @@
           font-size: 1.5rem;
           transition: color 0.3s ease;
         }
-
         /* === Contact Icons on Hover === */
         .contact-section .social a:hover {
         color: #64a19d; /* teal on hover */
@@ -84,7 +81,6 @@
         .scrolling-wrapper::-webkit-scrollbar {
             display: none; /* Chrome, Safari */
       }
-
         .essay-scroll-container {
           display: flex;
           overflow-x: auto;
@@ -92,7 +88,6 @@
           scroll-snap-type: x mandatory;
           padding: 1rem 0;
         }
-        
         .essay-card {
           background-color: #1a1a1a;
           color: white;
@@ -102,7 +97,6 @@
           scroll-snap-align: start;
           box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
-        
         .essay-card img {
           width: 100%;
           height: 180px;
@@ -110,23 +104,19 @@
           border-radius: 8px;
           margin-bottom: 1rem;
         }
-        
         .essay-card h3 {
           font-size: 1.2rem;
           margin-bottom: 0.5rem;
         }
-        
         .essay-card .category {
           color: #aaa;
           font-size: 0.9rem;
           margin-bottom: 0.5rem;
         }
-        
         .essay-card .excerpt {
           font-size: 1rem;
           margin-bottom: 1rem;
         }
-        
         .essay-card a {
           color: white;
           border: 1px solid white;
@@ -140,7 +130,9 @@
           background-color: white;
           color: black;
         }
-
+        .essay-scroll-container .collapse {
+            transition: height 0.4s ease;
+        }
     </style>
 
     <body id="page-top">
@@ -284,7 +276,14 @@
                   <h5 style="color: #ffffff; margin-top: 1rem;">The First Time I Felt Shame</h5>
                     <p style="color: #888; font-size: 0.9rem;">Personal Reflections</p>
                     <p style="color: #ddd; font-size: 0.95rem;">I was nine. A whisper in the hallway rewrote my sense of safety.</p>
-                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                  <a data-bs-toggle="collapse" href="#essay1-full" role="button" aria-expanded="false" aria-controls="essay1-full" 
+                      style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; 
+                      text-decoration: none; border-radius: 4px;">Read more </a>
+                  <div class="collapse mt-3" id="essay1-full">
+                      <div style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                          <p>This is the full version of Essay 1. You can write paragraphs here, add quotes, bold lines, anything you want.</p>
+                          <p>Feel free to break it into multiple sections or paragraphs to make it readable.</p>
+                      </div>
               </div>
 
               <!-- Essay Card 2 -->
@@ -293,7 +292,14 @@
                   <h5 style="color: #ffffff; margin-top: 1rem;">I Don’t Want to Be Ambitious Like That</h5>
                     <p style="color: #888; font-size: 0.9rem;">Growth & Perspective</p>
                     <p style="color: #ddd; font-size: 0.95rem;">For a long time, ambition looked like power and prestige. Now it looks like peace and purpose.</p>
-                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                  <a data-bs-toggle="collapse" href="#essay1-full" role="button" aria-expanded="false" aria-controls="essay1-full" 
+                      style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; 
+                      text-decoration: none; border-radius: 4px;">Read more </a>
+                  <div class="collapse mt-3" id="essay1-full">
+                      <div style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                          <p>This is the full version of Essay 1. You can write paragraphs here, add quotes, bold lines, anything you want.</p>
+                          <p>Feel free to break it into multiple sections or paragraphs to make it readable.</p>
+                      </div>
               </div>
                 
                     <!-- Essay Card 3 -->
@@ -318,16 +324,20 @@
                   <h5 style="color: #ffffff; margin-top: 1rem;">Blah Blah Blah</h5>
                     <p style="color: #888; font-size: 0.9rem;">Growth & Perspective</p>
                     <p style="color: #ddd; font-size: 0.95rem;">For a long time, ambition looked like power and prestige. Now it looks like peace and purpose.</p>
-                    <a href="#" style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">Read more</a>
+                  <a data-bs-toggle="collapse" href="#essay1-full" role="button" aria-expanded="false" aria-controls="essay1-full" 
+                      style="display: inline-block; margin-top: 10px; color: white; border: 1px solid white; padding: 6px 12px; 
+                      text-decoration: none; border-radius: 4px;">Read more </a>
+                  <div class="collapse mt-3" id="essay1-full">
+                      <div style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                          <p>This is the full version of Essay 1. You can write paragraphs here, add quotes, bold lines, anything you want.</p>
+                          <p>Feel free to break it into multiple sections or paragraphs to make it readable.</p>
+                      </div>
               </div>
 
               <!-- Add more cards as needed -->
-        
             </div>
-          </div>
-        </section>
-
-      
+          </div> 
+    </section>
 
         <!-- Signup page deactivated for now--> 
       <!--  <section class="signup-section" id="signup">
