@@ -162,8 +162,41 @@
           font-size:0.95rem;
           margin:0;
         }
-
+        .featured-image {
+          max-height: 420px;        /* adjust: try 380–450 */
+          width: 100%;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+        /* Box behind Selected Work text */
+        .featured-box {
+          background-color: #ffffff;
+          padding: 1.75rem 1.75rem;
+          border-radius: 10px;
+          box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
         
+        /* Improve text contrast inside the box */
+        .featured-box h4 {
+          color: #888;
+          margin-bottom: 0.75rem;
+        }
+        
+        .featured-box p {
+          color: #555;
+          line-height: 1.7;
+        }
+        
+        .featured-box a {
+          color: #64a19d;   /* your teal */
+          font-weight: 600;
+          text-decoration: underline;
+        }
+        @media (min-width: 992px) {
+          .featured-box {
+            margin-top: 1rem;
+          }
+        }   
     </style>
 
     <body id="page-top">
@@ -245,9 +278,9 @@
                 <h1 class="mb-4" style="color: black;">Know Me More</h1>
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="img1.png" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid featured-image" src="img1.png" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
+                        <div class="featured-text text-center text-lg-left featured-box">
                             <h4>Selected Work</h4>
                                 <p class="mb-0">
                                     <a href="Research_Paper.pdf" target="_blank" rel="noopener noreferrer">This project</a> was motivated by a practical tension I kept noticing in creative workflows. Designers need space to experiment and refine ideas without compromising craftsmanship, yet the early stages of design often involve repeated trial and error that can be costly in both time and resources. <br> <br>
@@ -322,7 +355,7 @@
                 <div class="beyond-card h-100">
                   <img src="essay2.jpg" alt="Ideas" class="beyond-img" />
                   <h5 class="beyond-title">Great ideas are made of...</h5>
-                  <p class="beyond-text">Great leaders</p>
+                  <p class="beyond-text">Good questions</p>
                 </div>
               </div>
         
@@ -331,7 +364,7 @@
                 <div class="beyond-card h-100">
                   <img src="essay3.jpg" alt="Podcast" class="beyond-img" />
                   <h5 class="beyond-title">A voice I often return to...</h5>
-                  <p class="beyond-text">The Mel Robbins Podcast</p>
+                  <p class="beyond-text">Mel Robbins</p>
                 </div>
               </div>
         
