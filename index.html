@@ -282,9 +282,17 @@
         }
         .insight-tile{
           position: relative;
-          border-radius: 14px;
+          border-radius: 16px;
           overflow: hidden;
-          height: 260px; /* compact */
+          height: 220px;              /* shorter = less space */
+          box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+          transform: translateZ(0);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        
+        .insight-tile:hover{
+          transform: translateY(-4px);
+          box-shadow: 0 16px 30px rgba(0,0,0,0.45);
         }
         
         .insight-tile img{
@@ -292,26 +300,28 @@
           height: 100%;
           object-fit: cover;
           display: block;
-          transform: scale(1.02);
+          transform: scale(1.03);
+          transition: transform 0.35s ease;
+        }
+        
+        .insight-tile:hover img{
+          transform: scale(1.08);
         }
         
         .insight-overlay{
           position: absolute;
           inset: 0;
-          padding: 18px;
+          padding: 16px 16px 14px 16px;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          text-align: left;
-        
           background: linear-gradient(
             to top,
-            rgba(0,0,0,0.88) 0%,
-            rgba(0,0,0,0.35) 55%,
-            rgba(0,0,0,0.05) 100%
+            rgba(0,0,0,0.90) 0%,
+            rgba(0,0,0,0.35) 60%,
+            rgba(0,0,0,0.08) 100%
           );
         }
-        
         .insight-overlay h4{
           color: #fff;
           margin: 0 0 6px 0;
@@ -323,21 +333,54 @@
           margin: 0;
           line-height: 1.4;
         }
-
-        
-        /* Text on top of gradient */
-        .featured-overlay {
+        .featured-overlay{
           position: absolute;
-          bottom: 2rem;
-          left: 2.5rem;
-          right: 2.5rem;
-          color: #f1f1f1;
+          left: 24px;
+          right: 24px;
+          bottom: 22px;
           z-index: 2;
+          max-width: 980px;
         }
-        .featured-overlay h4 {
-          color: #ddd;
-          margin-bottom: 0.75rem;
+        
+        .featured-overlay h4{
+          color: #f2f2f2;
+          margin-bottom: 10px;
+          font-weight: 600;
         }
+        
+        .featured-sub{
+          color: rgba(255,255,255,0.84);
+          line-height: 1.6;
+          margin: 0 0 12px 0;
+          max-width: 80ch;
+        }
+        
+        .featured-cta{
+          display: inline-block;
+          padding: 10px 14px;
+          border-radius: 10px;
+          border: 1px solid rgba(255,255,255,0.22);
+          background: rgba(0,0,0,0.28);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 500;
+          transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
+        }
+        
+        .featured-cta:hover{
+          transform: translateY(-2px);
+          background: rgba(255,255,255,0.08);
+          border-color: rgba(255,255,255,0.32);
+        }
+        
+        .featured-meta{
+          color: rgba(255,255,255,0.62);
+          margin: 10px 0 0 0;
+          font-size: 0.92rem;
+        }
+
+
+
         .featured-overlay p {
           color: #e0e0e0;
           line-height: 1.7;
@@ -405,27 +448,6 @@
                 </div>
             </div>
         </section>
-
-        
-        <!-- resume display --> 
-        <!-- <section class="projects-section bg-light" id="resume" style="padding: 0; margin: 0;>
-            <div class="container px-4 px-lg-5">
-                <h2 class="mb-4">Resume</h2>
-                <p class="text-black-50 mb-4"> Here’s a quick look at where I’ve been — professionally and otherwise. </p> 
-            </div>
-        
-            <!-- Optional: Embedded Preview -->
-           <!--  <div style="width: 100vw; height: 100vh; margin: 0; padding: 0;">
-              <iframe 
-                src="Resume.pdf" 
-                width="100%" 
-                height="100%" 
-                frameborder="0"
-                style="border: none; display: block;">
-              </iframe>
-            </div>
-        </section> -->
-        
         
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
@@ -434,25 +456,18 @@
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 justify-content-center">
                 <!-- Image: full width -->
-                    <div class="col-12 featured-wrapper">
-                      <img class="img-fluid featured-image" src="img1.png" alt="..." />
-                    
-                      <div class="featured-overlay">
-                        <h4>Selected Work</h4>
-                        <p>
-                          <a href="Research_Paper.pdf" target="_blank">This project</a>
-                          was motivated by a practical tension I kept noticing in creative workflows.
-                          Designers need space to experiment and refine ideas without compromising craftsmanship,
-                          yet the early stages of design often involve repeated trial and error that can be costly.
-                          <br><br>
-                          I wanted to explore whether technology could support that process, not by replacing
-                          creative judgment, but by reducing friction in early decision-making.
-                          <br><br>
-                          I presented this work at ICAML, where I was the youngest presenter.
-                        </p>
-                      </div>
+                    <div class="featured-overlay">
+                      <h4>Selected Work</h4>
+                      <p class="featured-sub">
+                        I explored how AI can reduce friction in early design decisions—without replacing creative judgment.
+                      </p>
+                      <a class="featured-cta" href="Research_Paper.pdf" target="_blank" rel="noopener noreferrer">
+                        Read the paper </a>
+                      <p class="featured-meta">Presented at International Conference of AI & ML as the youngest presenter</p>
+                    </div>
                     </div>
                 </div>
+                
                 <!-- Compact Insight Tiles -->
                 <div class="row g-4 mb-5">
                   <div class="col-12 col-md-4">
