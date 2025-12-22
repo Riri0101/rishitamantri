@@ -168,10 +168,10 @@
           object-fit: cover;
           border-radius: 6px;
         }
-                /* Box behind Selected Work text */
-        .featured-box {
-          max-width: 1000px;      /* THIS is the key */
-          margin: 0 auto;        /* center it horizontally */
+        .featured-box{
+          width: 100%;
+          max-width: none;   /* removes the cap */
+          margin: 0 auto;
           background-color: #ffffff;
           padding: 2rem 2.25rem;
           border-radius: 14px;
@@ -194,6 +194,7 @@
           font-weight: 600;
           text-decoration: underline;
         }
+        
         @media (min-width: 992px) {
           .featured-box {
             margin-top: 1rem;
@@ -283,7 +284,7 @@
                 <!-- Image: full width -->
                     <div class="col-12 mb-4">
                         <img class="img-fluid featured-image" src="img1.png" alt="..." />
-                    </div>                    <div class="col-xl-4 col-lg-5">
+                    </div>   
                   <!-- Text box: centered under image -->
                     <div class="col-12">
                         <div class="featured-text featured-box text-start">
@@ -321,8 +322,7 @@
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">How I’m Thinking Now</h4>
                                     <p class="mb-0 text-white-50">My time at Duke has shifted how I think about data. I’m less interested in perfect models, and more interested in what insights actually change decisions. <br> 
-                                        I’m learning how to sit with ambiguity, test assumptions, and communicate findings in ways that make sense beyond dashboards. The technical tools matter, but only insofar as they support clearer thinking and better judgment.<br>
-                                        This mindset has become central to how I approach analytics today.</p>
+                                        I’m learning how to sit with ambiguity, test assumptions, and communicate findings in ways that make sense beyond dashboards. The tools matter, but only insofar as they support clearer thinking and better judgment.<br></p> 
                                 </div>
                             </div>
                         </div>
