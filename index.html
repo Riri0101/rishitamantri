@@ -133,7 +133,6 @@
         .essay-scroll-container .collapse {
             transition: height 0.4s ease;
         }
-
         .beyond-card{
           background:#1c1c1c;
           border-radius:12px;
@@ -156,11 +155,71 @@
           margin-top:8px;
           font-size:1.05rem;
         }
-        
         .beyond-text{
           color:#ddd;
           font-size:0.95rem;
           margin:0;
+        }
+                /* Featured image with smooth overlay */
+        .featured-hero{
+          position: relative;
+          border-radius: 14px;
+          overflow: hidden;
+        }
+        
+        .featured-hero-img{
+          width: 100%;
+          height: clamp(320px, 42vw, 520px); /* responsive height */
+          object-fit: cover;
+          display: block;
+        }
+        
+        /* gradient overlay */
+        .featured-hero-overlay{
+          position: absolute;
+          inset: 0;
+          padding: clamp(18px, 3vw, 34px);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        
+          background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.88) 0%,
+            rgba(0,0,0,0.45) 45%,
+            rgba(0,0,0,0.05) 80%
+          );
+        }
+        
+        .featured-hero-title{
+          color: #eaeaea;
+          margin: 0 0 10px 0;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+        }
+        
+        .featured-hero-text{
+          color: rgba(255,255,255,0.86);
+          max-width: 92ch; /* keeps lines readable on huge screens */
+          line-height: 1.7;
+        }
+        
+        .featured-hero-text a{
+          color: #64a19d;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+        
+        /* Mobile: make overlay more readable */
+        @media (max-width: 576px){
+          .featured-hero-overlay{
+            background: linear-gradient(
+              to top,
+              rgba(0,0,0,0.92) 0%,
+              rgba(0,0,0,0.55) 55%,
+              rgba(0,0,0,0.18) 100%
+            );
+          }
         }
         .featured-image {
           max-height: 420px;        /* adjust: try 380–450 */
@@ -221,6 +280,50 @@
           );
           border-radius: 8px;
         }
+        .insight-tile{
+          position: relative;
+          border-radius: 14px;
+          overflow: hidden;
+          height: 260px; /* compact */
+        }
+        
+        .insight-tile img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transform: scale(1.02);
+        }
+        
+        .insight-overlay{
+          position: absolute;
+          inset: 0;
+          padding: 18px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          text-align: left;
+        
+          background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.88) 0%,
+            rgba(0,0,0,0.35) 55%,
+            rgba(0,0,0,0.05) 100%
+          );
+        }
+        
+        .insight-overlay h4{
+          color: #fff;
+          margin: 0 0 6px 0;
+          font-size: 1.05rem;
+        }
+        
+        .insight-overlay p{
+          color: rgba(255,255,255,0.78);
+          margin: 0;
+          line-height: 1.4;
+        }
+
         
         /* Text on top of gradient */
         .featured-overlay {
@@ -231,23 +334,19 @@
           color: #f1f1f1;
           z-index: 2;
         }
-        
         .featured-overlay h4 {
           color: #ddd;
           margin-bottom: 0.75rem;
         }
-        
         .featured-overlay p {
           color: #e0e0e0;
           line-height: 1.7;
           max-width: 900px;
         }
-        
         .featured-overlay a {
           color: #64a19d;
           font-weight: 600;
         }
-
         @media (min-width: 992px) {
           .featured-box {
             margin-top: 1rem;
@@ -346,7 +445,7 @@
                           Designers need space to experiment and refine ideas without compromising craftsmanship,
                           yet the early stages of design often involve repeated trial and error that can be costly.
                           <br><br>
-                          I wanted to explore whether technology could support that process — not by replacing
+                          I wanted to explore whether technology could support that process, not by replacing
                           creative judgment, but by reducing friction in early decision-making.
                           <br><br>
                           I presented this work at ICAML, where I was the youngest presenter.
@@ -354,39 +453,39 @@
                       </div>
                     </div>
                 </div>
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6 d-flex align-items-stretch">
-                        <img class="img-fluid" src="img2.png" alt="..." /></div>
-                    <div class="col-lg-6 d-flex align-items-stretch">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">How I’m Thinking Now</h4>
-                                    <p class="mb-0 text-white-50">My time at Duke has shifted how I think about data. I’m less interested in perfect models, and more interested in what insights actually change decisions. <br> 
-                                        I’m learning how to sit with ambiguity, test assumptions, and communicate findings in ways that make sense beyond dashboards. The tools matter, but only insofar as they support clearer thinking and better judgment.<br></p> 
-                                </div>
-                            </div>
-                        </div>
+                <!-- Compact Insight Tiles -->
+                <div class="row g-4 mb-5">
+                  <div class="col-12 col-md-4">
+                    <div class="insight-tile">
+                      <img src="img2.png" alt="Thinking Now" />
+                      <div class="insight-overlay">
+                        <h4>How I’m Thinking Now</h4>
+                        <p class="mb-0">Less perfect models. More decisions changed.</p>
+                      </div>
                     </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6 d-flex align-items-stretch">
-                        <img class="img-fluid" src="img3.png" alt="..." /></div>
-                    <div class="col-lg-6 d-flex align-items-stretch order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">What I’m Paying Attention To</h4>
-                                    <p class="mb-0 text-white-50"> I’m drawn to personalization, not as a growth tactic alone, but as a way to make consumer experiences more intentional. When products, messaging, and recommendations are better aligned with real needs, fewer decisions feel wasteful or misdirected.                                     </p>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                
+                  <div class="col-12 col-md-4">
+                    <div class="insight-tile">
+                      <img src="img3.png" alt="Paying Attention To" />
+                      <div class="insight-overlay">
+                        <h4>What I’m Paying Attention To</h4>
+                        <p class="mb-0">Personalization that reduces waste, not just boosts growth.</p>
+                      </div>
                     </div>
+                  </div>
+                
+                  <div class="col-12 col-md-4">
+                    <div class="insight-tile">
+                      <img src="img3.png" alt="Working Style" />
+                      <div class="insight-overlay">
+                        <h4>How I Work</h4>
+                        <p class="mb-0">Test assumptions fast. Communicate simply. Iterate.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
+
        
         
         <!-- Essays Section (Behind the Resume) -->
