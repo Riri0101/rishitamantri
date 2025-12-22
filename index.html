@@ -178,7 +178,6 @@
           box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
         
-        /* Improve text contrast inside the box */
         .featured-box h4 {
           color: #888;
           margin-bottom: 0.75rem;
@@ -194,7 +193,61 @@
           font-weight: 600;
           text-decoration: underline;
         }
+        .featured-wrapper {
+          position: relative;
+          width: 100%;
+        }
         
+        .featured-image {
+          width: 100%;
+          max-height: 420px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        
+        /* Gradient fade */
+        .featured-wrapper::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 55%;
+          background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.4),
+            transparent
+          );
+          border-radius: 8px;
+        }
+        
+        /* Text on top of gradient */
+        .featured-overlay {
+          position: absolute;
+          bottom: 2rem;
+          left: 2.5rem;
+          right: 2.5rem;
+          color: #f1f1f1;
+          z-index: 2;
+        }
+        
+        .featured-overlay h4 {
+          color: #ddd;
+          margin-bottom: 0.75rem;
+        }
+        
+        .featured-overlay p {
+          color: #e0e0e0;
+          line-height: 1.7;
+          max-width: 900px;
+        }
+        
+        .featured-overlay a {
+          color: #64a19d;
+          font-weight: 600;
+        }
+
         @media (min-width: 992px) {
           .featured-box {
             margin-top: 1rem;
@@ -282,35 +335,24 @@
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 justify-content-center">
                 <!-- Image: full width -->
-                    <div class="col-12 mb-4">
-                        <img class="img-fluid featured-image" src="img1.png" alt="..." />
-                    </div>   
-                  <!-- Text box: centered under image -->
-                    <div class="col-12">
-                        <div class="featured-text featured-box text-start">
-                            <h4>Selected Work</h4>
-                            <p class="mb-0">
-                                <a href="Research_Paper.pdf" target="_blank" rel="noopener noreferrer">This project</a>
-                                was motivated by a practical tension I kept noticing in creative workflows.
-                                Designers need space to experiment and refine ideas without compromising craftsmanship,
-                                yet the early stages of design often involve repeated trial and error that can be costly
-                                in both time and resources.
-                                <br>
-                
-                                I wanted to explore whether technology could support that process, not by replacing
-                                creative judgment, but by reducing friction in early decision-making.
-                                <br>
-                
-                                While the application was in apparel design, the underlying motivation was broader:
-                                enabling more thoughtful, efficient decision-making in creative, consumer-facing contexts.
-                                <br>
-                
-                                I presented this work at the International Conference on Applications of AI and Machine Learning (ICAML),
-                                where I was the youngest presenter.
-                            </p>
-                        </div>
+                    <div class="col-12 featured-wrapper">
+                      <img class="img-fluid featured-image" src="img1.png" alt="..." />
+                    
+                      <div class="featured-overlay">
+                        <h4>Selected Work</h4>
+                        <p>
+                          <a href="Research_Paper.pdf" target="_blank">This project</a>
+                          was motivated by a practical tension I kept noticing in creative workflows.
+                          Designers need space to experiment and refine ideas without compromising craftsmanship,
+                          yet the early stages of design often involve repeated trial and error that can be costly.
+                          <br><br>
+                          I wanted to explore whether technology could support that process — not by replacing
+                          creative judgment, but by reducing friction in early decision-making.
+                          <br><br>
+                          I presented this work at ICAML, where I was the youngest presenter.
+                        </p>
+                      </div>
                     </div>
-                
                 </div>
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
